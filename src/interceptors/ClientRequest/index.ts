@@ -25,6 +25,8 @@ export class ClientRequestInterceptor extends Interceptor<HttpRequestEventMap> {
     this.modules = new Map()
     this.modules.set('http', http)
     this.modules.set('https', https)
+    this.modules.set('node:http', http)
+    this.modules.set('node:https', https)
   }
 
   protected setup(): void {
